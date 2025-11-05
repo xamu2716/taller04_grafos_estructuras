@@ -1,5 +1,6 @@
 #include "nodo.h"
 #include <cmath>
+#include "arista.h"
 
 Nodo::Nodo() : id(-1), x(0.0), y(0.0), visitado(false) {}
 Nodo::Nodo(int id_, double x_, double y_) : id(id_), x(x_), y(y_), visitado(false) {}
@@ -16,4 +17,16 @@ double Nodo::distanciaA(const Nodo& otro) const {
     double dx = x - otro.x;
     double dy = y - otro.y;
     return std::sqrt(dx*dx + dy*dy);
+}
+
+void Nodo::agregarArista(const Arista& arista) {
+    aristasSalientes.push_back(arista);
+}
+
+const std::vector<Arista>& Nodo::obtenerAristas() const {
+    return aristasSalientes;
+}
+
+void Nodo::limpiarAristas() {
+    aristasSalientes.clear();
 }
