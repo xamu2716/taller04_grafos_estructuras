@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17
+CXXFLAGS = -std=c++11
 
 OBJS = nodo.o arista.o sistema.o main.o
 TARGET = ejecutable
