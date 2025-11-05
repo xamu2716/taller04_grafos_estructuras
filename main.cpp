@@ -99,7 +99,7 @@ int main() {
             std::cout << N << "\n";
             std::cout << k << "\n";
             for (int i = 0; i < N; i++) {
-                std::cout << escenarios[i].m << "\n";
+                std::cout << salidas[i].size() << "\n";
                 for (int t = 0; t < (int)salidas[i].size(); t++) {
                     std::cout << salidas[i][t].first << " " << salidas[i][t].second << "\n";
                 }
@@ -124,7 +124,7 @@ int main() {
             out << N << "\n";
             out << k << "\n";
             for (int i = 0; i < N; i++) {
-                out << escenarios[i].m << "\n";
+                out << salidas[i].size() << "\n";
                 for (int t = 0; t < (int)salidas[i].size(); t++) {
                     out << salidas[i][t].first << " " << salidas[i][t].second << "\n";
                 }
